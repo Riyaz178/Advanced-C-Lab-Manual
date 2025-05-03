@@ -13,11 +13,18 @@ Algorithm:
  
 Program:
 
-//type your code here
-
+float stack[100];
+ int top=-1;
+ void display() 
+{ 
+    for(int i=top;i>=0;i--) 
+    { 
+        printf("%.1f ",stack[i]); 
+    } 
+}
 Output:
+![image](https://github.com/user-attachments/assets/329b5a3b-161b-4b10-aea0-d2cf69270373)
 
-//paste your output here
 
 
 
@@ -35,12 +42,23 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
-
-//type your code here
+char stack[100];
+int size=3,top=-1,i;
+void push (char data) 
+{ 
+    if(top==size-1) 
+    { 
+        printf("stack is full\n"); 
+    } 
+    else 
+    { 
+    top=top+1;     stack[top]=data; 
+    } 
+}
 
 Output:
+![image](https://github.com/user-attachments/assets/e3f6d036-235a-435e-9879-9c80ef2e4e03)
 
-//paste your output here
 
 
 
@@ -62,11 +80,26 @@ Algorithm:
  
 Program:
 
-//type your code here
+int queue[50], rear=-1, front=-1;
+void display() 
+{ 
+    if(rear==-1 && front==-1) 
+    { 
+        printf("No elements to display"); 
+    } 
+    else 
+    { 
+        for(int i=front;i<=rear;i++) 
+        { 
+            printf("%d\n",queue[i]); 
+        } 
+    } 
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/7ec67752-0bea-4a39-85ee-1d4d92af4ab8)
+
 
 
 Result:
@@ -86,11 +119,26 @@ Algorithm:
 
 Program:
 
-//type your code here
+int rear,front;
+int queue[50];
+void enqueue(int data) 
+{ 
+    if(rear==-1 && front==-1) 
+    { 
+        rear+=1;         front=0; 
+    } 
+    else 
+    { 
+        rear+=1; 
+    } 
+    queue[rear]=data; 
+}
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/04a6481d-5310-4b97-933a-923aacbcb3ec)
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +169,16 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+int front, rear;
+ void dequeue()
+{ 
+    front=front+1; 
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/44478e2c-38c8-4d35-92de-cf3d51573670)
+
 
 
 Result:
